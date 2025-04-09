@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reset-password</title>
+    <script>
+        const status = "<%= status %>"; // Render the status as a string
+        if (status === "verified") {
+            if (confirm("Password reset successfully! Do you want to login?")) {
+                window.location.href = "http://localhost:3000/login";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        <%= email%>
+    </h1>
+    <form action="" method="POST">
+        <input type="password" name="password" id="password" placeholder="password" />
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password" />
+        <br />
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>
